@@ -1,0 +1,1 @@
+export function Card({children,className='',interactive=false,style}:{children:React.ReactNode;className?:string;interactive?:boolean;style?:React.CSSProperties}){return <article style={style} className={`saikan-card relative overflow-hidden p-5 sm:p-6 ${interactive?'transition hover:-translate-y-1 hover:border-white/25':''} ${className}`}>{children}</article>}

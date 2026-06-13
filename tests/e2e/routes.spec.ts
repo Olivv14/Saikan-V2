@@ -1,0 +1,3 @@
+import { expect, test } from '@playwright/test'
+for (const width of [360,390,430,768,1024,1280,1440]) { test(`home has no horizontal overflow at ${width}`, async ({page})=>{ await page.setViewportSize({width,height:900}); await page.goto('/'); await expect(page.getByRole('heading',{name:/^Your operations/i})).toBeVisible(); const noOverflow=await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth); expect(noOverflow).toBe(true) }) }
+test('contact route renders form', async ({page})=>{ await page.setViewportSize({width:390,height:900}); await page.goto('/contact'); await expect(page.getByRole('heading',{name:/Book a call/i})).toBeVisible(); await expect(page.getByLabel('Email')).toBeVisible() })

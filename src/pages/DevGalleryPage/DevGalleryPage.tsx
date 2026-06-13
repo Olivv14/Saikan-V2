@@ -1,0 +1,3 @@
+import { Button } from '@/components/ui/Button'
+import { Card } from '@/components/ui/Card'
+export default function DevGalleryPage(){return <main className='mx-auto max-w-6xl space-y-10 px-6 py-14'><h1 className='text-5xl font-semibold tracking-[-.06em]'>Saikan V2 Dev Gallery</h1><div className='flex flex-wrap gap-3'><Button href='#'>Primary</Button><Button href='#' variant='secondary'>Secondary</Button><Button href='#' variant='ghost'>Ghost</Button></div><div className='grid gap-4 md:grid-cols-3'><Card><h3 className='text-xl font-semibold'>Surface</h3><p className='mt-2 text-muted'>Reusable card shell.</p></Card><Card interactive><h3 className='text-xl font-semibold'>Interactive</h3><p className='mt-2 text-muted'>Hover/focus affordance.</p></Card></div></main>}

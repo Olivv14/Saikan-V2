@@ -1,0 +1,1 @@
+export function ResponsiveMedia({src,alt,className='',ratio='aspect-[4/3]'}:{src:string;alt:string;className?:string;ratio?:string}){return <div className={`relative overflow-hidden rounded-[24px] border border-white/10 bg-white/[.03] ${ratio} ${className}`}><img src={src} alt={alt} loading='lazy' decoding='async' className='h-full w-full object-contain'/></div>}

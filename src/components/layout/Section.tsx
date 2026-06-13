@@ -1,0 +1,1 @@
+export function Section({id,children,className='',compact=false}:{id?:string;children:React.ReactNode;className?:string;compact?:boolean}){return <section id={id} className={`relative overflow-hidden ${compact?'py-14 md:py-20':'py-20 md:py-28 lg:py-32'} ${className}`}>{children}</section>}
