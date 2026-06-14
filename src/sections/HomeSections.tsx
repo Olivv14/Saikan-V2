@@ -1,20 +1,410 @@
-import { ArrowRight, Check, X } from 'lucide-react'
+import type { CSSProperties } from 'react'
+import {
+  ArrowDown,
+  ArrowRight,
+  Box,
+  Check,
+  RefreshCw,
+  Search,
+  X,
+} from 'lucide-react'
 import { Carousel } from '@/components/carousel/Carousel'
-import { PageContainer } from '@/components/layout/PageContainer'
-import { Section } from '@/components/layout/Section'
 import { Button } from '@/components/ui/Button'
-import { Card } from '@/components/ui/Card'
-import { ResponsiveMedia } from '@/components/ui/ResponsiveMedia'
-import { SectionHeader } from '@/components/ui/SectionHeader'
 import { architecture, businessLines, clientSolutions, hero, products, thesis, ventureStudio } from '@/content/home'
-function Lines({ lines, highlighted=[] }: { lines:string[]; highlighted?:string[] }) { return <>{lines.map((line)=><span key={line} className={`block ${highlighted.includes(line)?'text-white drop-shadow-[0_0_24px_rgba(255,255,255,.26)]':''}`}>{line}</span>)}</> }
-export function Hero(){return <header id="hero" className="relative min-h-[calc(100svh-4rem)] overflow-hidden py-16 sm:py-20 lg:py-28"><PageContainer className="relative grid min-h-[620px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div className="relative z-10 max-w-xl"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-muted">{hero.eyebrow}</p><h1 className="text-[clamp(4rem,21vw,7.6rem)] font-semibold leading-[0.78] tracking-[-0.085em] text-ink lg:text-[clamp(6rem,9vw,8.6rem)]"><Lines lines={hero.titleLines} highlighted={hero.highlightedLines}/></h1><p className="mt-8 max-w-md text-lg leading-8 text-muted">{hero.description}</p><div className="mt-9 flex w-full max-w-[190px] flex-col gap-3">{hero.actions.map((a)=><Button key={a.label} href={a.href} variant={a.variant} className="w-full">{a.label}{a.icon?<span>{a.icon}</span>:null}</Button>)}</div></div><div className="pointer-events-none relative mx-auto aspect-[4/5] w-full max-w-[420px] lg:max-w-[560px]"><div className="section-glow left-1/2 top-1/2 h-[72%] w-[72%] -translate-x-1/2 -translate-y-1/2 bg-white/20"/><img src={hero.image} alt="" aria-hidden="true" className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_56px_rgba(255,255,255,.12)]"/></div></PageContainer></header>}
-export function Thesis(){return <Section id="operating-model"><PageContainer><SectionHeader eyebrow={thesis.eyebrow} title={<Lines lines={thesis.titleLines}/>} description={thesis.description.map((d)=><p key={d}>{d}</p>)}/><div className="mt-12 grid gap-5 lg:grid-cols-[0.9fr_1.1fr_0.9fr]"><Card className="space-y-3">{thesis.inputs.map(([label,Icon,color])=><div key={String(label)} className="flex items-center gap-3 rounded-2xl bg-white/[.04] p-3"><Icon style={{color:String(color)}} size={20}/><span>{String(label)}</span></div>)}</Card><Card className="grid content-center text-center"><div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/[.06] text-2xl font-semibold shadow-card-glow">Saikan OS</div><p className="mt-6 text-muted">One adaptive operating layer for context, memory and execution.</p></Card><Card className="space-y-3">{thesis.outcomes.map(([title,sub,color,Icon])=><div key={String(title)} className="flex items-center gap-3 rounded-2xl bg-white/[.04] p-3"><Icon style={{color:String(color)}} size={20}/><span><b className="block text-sm">{String(title)}</b><span className="text-xs text-muted">{String(sub)}</span></span></div>)}</Card></div><div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{thesis.capabilities.map(([title,desc,color,Icon])=><Card key={String(title)}><div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/[.06]" style={{color:String(color)}}>{Icon?<Icon size={20}/>:<span>24/7</span>}</div><h3 className="text-xl font-semibold">{String(title)}</h3><p className="mt-2 text-sm leading-6 text-muted">{String(desc)}</p></Card>)}</div></PageContainer></Section>}
-export function Architecture(){return <Section id="architecture"><PageContainer><SectionHeader eyebrow={architecture.eyebrow} title={<Lines lines={architecture.title}/>} description={architecture.description.map((d)=><p key={d}>{d}</p>)}/><div className="mt-12 lg:hidden"><Carousel items={architecture.layers} ariaLabel="Architecture layers" renderItem={(l)=><LayerCard layer={l}/>}/></div><div className="mt-12 hidden gap-5 lg:grid lg:grid-cols-4">{architecture.layers.map((l)=><LayerCard key={l.id} layer={l}/>)}</div></PageContainer></Section>}
-function LayerCard({layer}:{layer:typeof architecture.layers[number]}){return <Card className="min-h-[460px]"><span className="text-xs uppercase tracking-[.24em] text-muted">{layer.kicker}</span><ResponsiveMedia src={layer.image} alt="" className="my-5" ratio="aspect-square"/><h3 className="text-2xl font-semibold">{layer.title}</h3><p className="mt-2 text-sm text-muted">{layer.lead}</p><div className="mt-5 flex flex-wrap gap-2">{layer.points.map((p)=><span key={p} className="rounded-full border border-white/10 px-3 py-1 text-xs" style={{color:layer.accent}}>{p}</span>)}</div></Card>}
-export function BusinessLines(){return <Section id="business-lines"><PageContainer><SectionHeader eyebrow={businessLines.eyebrow} title={<Lines lines={businessLines.titleLines}/>} description={<p>{businessLines.description}</p>}/><div className="mt-12 grid gap-5 lg:grid-cols-3">{businessLines.items.map((i)=><Card interactive key={i.key}><ResponsiveMedia src={i.asset} alt="" ratio="aspect-[5/4]"/><h3 className="mt-6 text-2xl font-semibold">{i.title}</h3><p className="mt-2 min-h-12 text-muted">{i.body}</p><a href={`#${i.targetId}`} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold">{i.cta}<ArrowRight size={16}/></a></Card>)}</div></PageContainer></Section>}
-function CompareCard({title,items,negative=false}:{title:string;items:string[];negative?:boolean}){return <Card><h3 className="text-2xl font-semibold">{title}</h3><div className="mt-6 space-y-3">{items.map((i)=><div key={i} className="flex items-center gap-3 rounded-2xl bg-white/[.04] p-3">{negative?<X className="text-pulse" size={18}/>:<Check className="text-brain" size={18}/>}<span>{i}</span></div>)}</div></Card>}
-export function ClientSolutions(){return <Section id="client-solutions"><PageContainer><SectionHeader eyebrow={clientSolutions.eyebrow} title={<Lines lines={clientSolutions.titleLines}/>} description={<p>{clientSolutions.description}</p>}/><div className="mt-12 grid gap-5 lg:grid-cols-2"><CompareCard title="Before Saikan" items={clientSolutions.beforeItems} negative/><CompareCard title="After Saikan" items={clientSolutions.afterItems}/></div><div className="mt-5 grid gap-5 md:grid-cols-3">{clientSolutions.steps.map(([n,t,b])=><Card key={String(n)}><span className="text-sm text-muted">{String(n)}</span><h3 className="mt-3 text-xl font-semibold">{String(t)}</h3><p className="mt-2 text-sm leading-6 text-muted">{String(b)}</p></Card>)}</div></PageContainer></Section>}
-export function Products(){return <Section id="products"><PageContainer><SectionHeader eyebrow={products.eyebrow} title={<Lines lines={products.titleLines} highlighted={products.highlightedLines}/>} description={<p>{products.description}</p>}/><div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{products.items.map(([name,audience,body,logo,accent,points])=><Card key={String(name)} style={{'--accent':String(accent)} as React.CSSProperties}><div className="section-glow right-5 top-5 h-28 w-28 bg-[var(--accent)]/25"/><img src={String(logo)} alt={`${String(name)} logo`} className="relative z-10 h-20 w-20 object-contain"/><p className="mt-5 text-xs uppercase tracking-[.22em] text-muted">{String(audience)}</p><h3 className="mt-2 text-2xl font-semibold">{String(name)}</h3><p className="mt-2 text-sm text-muted">{String(body)}</p><div className="mt-5 flex flex-wrap gap-2">{(points as string[]).map((p)=><span key={p} className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted">{p}</span>)}</div></Card>)}</div></PageContainer></Section>}
-export function VentureStudio(){return <Section id="venture-studio"><PageContainer><SectionHeader eyebrow={ventureStudio.eyebrow} title={<Lines lines={ventureStudio.titleLines} highlighted={ventureStudio.highlightedLines}/>} description={<p>{ventureStudio.description}</p>}/><div className="mt-12 grid gap-5 md:grid-cols-3">{ventureStudio.items.map(([name,eyebrow,body,logo,accent])=><Card key={String(name)} style={{'--accent':String(accent)} as React.CSSProperties}><div className="flex h-24 items-center justify-center rounded-3xl bg-white/[.04]"><img src={String(logo)} alt={String(name)} className="max-h-14 object-contain"/></div><p className="mt-5 text-xs uppercase tracking-[.22em] text-muted">{String(eyebrow)}</p><h3 className="mt-2 text-2xl font-semibold">{String(name)}</h3><p className="mt-2 text-sm text-muted">{String(body)}</p></Card>)}</div></PageContainer></Section>}
-export function FinalCTA(){return <Section id="final-cta" compact><PageContainer><Card className="text-center"><h2 className="text-4xl font-semibold tracking-[-.05em] md:text-6xl">Build your operating system.</h2><p className="mx-auto mt-5 max-w-2xl text-muted">Bring your operations, knowledge and execution into one adaptive AI layer.</p><Button href="/contact" size="lg" className="mt-8">Book a Call ↗</Button></Card></PageContainer></Section>}
+
+type StyleVars = CSSProperties & Record<'--accent', string>
+
+function Mark({ className = '' }: { className?: string }) {
+  return <img src="/assets/sketch/brand-mark.png" alt="Saikan" className={`saikan-mark ${className}`} />
+}
+
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return <p className="eyebrow">{children}</p>
+}
+
+function Headline({ lines, blue = [] }: { lines: string[]; blue?: string[] }) {
+  return (
+    <h2 className="section-title">
+      {lines.map((line) => (
+        <span key={line} className={blue.includes(line) ? 'text-blue' : undefined}>
+          {line}
+        </span>
+      ))}
+    </h2>
+  )
+}
+
+function GlowIcon({ children, accent = '#6fa0ff' }: { children: React.ReactNode; accent?: string }) {
+  return (
+    <span className="glow-icon" style={{ '--accent': accent } as StyleVars}>
+      {children}
+    </span>
+  )
+}
+
+export function Hero() {
+  return (
+    <section id="hero" className="home-section hero-section">
+      <div className="page-shell hero-grid">
+        <div className="hero-copy">
+          <Eyebrow>{hero.eyebrow}</Eyebrow>
+          <h1 className="hero-title">
+            <span>Your</span>
+            <span>operations.</span>
+            <span className="text-blue">Smarter.</span>
+            <span>Always.</span>
+          </h1>
+          <p className="hero-lead">{hero.description}</p>
+          <div className="hero-actions">
+            <Button href="#operating-model" variant="secondary">Explore Solutions</Button>
+            <Button href="/contact" variant="primary">Book a Call <ArrowRight size={14} /></Button>
+          </div>
+        </div>
+        <div className="hero-art" aria-hidden="true">
+          <div className="hero-orb" />
+          <img src={hero.image} alt="" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ThesisFlow({ mode }: { mode: 'inputs' | 'capabilities' | 'outcomes' }) {
+  if (mode === 'capabilities') {
+    return (
+      <div className="capability-grid">
+        {thesis.capabilities.map(([title, desc, accent, Icon]) => (
+          <div className="mini-card" key={String(title)} style={{ '--accent': String(accent) } as StyleVars}>
+            <GlowIcon accent={String(accent)}>{Icon ? <Icon size={17} /> : <span className="tiny-247">24/7</span>}</GlowIcon>
+            <h3>{String(title)}</h3>
+            <p>{String(desc)}</p>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  const items = mode === 'inputs' ? thesis.inputs : thesis.outcomes
+  return (
+    <div className={`flow-visual ${mode}`}>
+      <div className="flow-core">
+        <span>saikan</span>
+        <small>OS</small>
+      </div>
+      <div className="flow-list">
+        {items.map((item, index) => {
+          const label = String(item[0])
+          const accent = mode === 'inputs' ? String(item[2]) : String(item[2])
+          const Icon = mode === 'inputs' ? item[1] : item[3]
+          return (
+            <div className="flow-item" style={{ '--accent': accent } as StyleVars} key={label}>
+              <GlowIcon accent={accent}>{Icon ? <Icon size={18} /> : null}</GlowIcon>
+              <span>{label}</span>
+              <i className={`connector c${index + 1}`} />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+export function Thesis() {
+  const thesisSlides = [
+    <ThesisFlow key="inputs" mode="inputs" />,
+    <ThesisFlow key="capabilities" mode="capabilities" />,
+    <ThesisFlow key="outcomes" mode="outcomes" />,
+  ]
+
+  return (
+    <section id="operating-model" className="home-section thesis-section">
+      <div className="page-shell">
+        <Eyebrow>{thesis.eyebrow}</Eyebrow>
+        <Headline lines={thesis.titleLines} />
+        <div className="section-copy">{thesis.description.map((line) => <p key={line}>{line}</p>)}</div>
+        <div className="mobile-carousel thesis-carousel">
+          <Carousel items={thesisSlides} ariaLabel="Saikan thesis visuals" renderItem={(slide) => slide} />
+        </div>
+        <div className="desktop-triad">
+          <ThesisFlow mode="inputs" />
+          <ThesisFlow mode="capabilities" />
+          <ThesisFlow mode="outcomes" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LayerDeck() {
+  return (
+    <div className="layer-deck-card">
+      <img src="/assets/sketch/system-stack.webp" alt="" />
+      <div className="layer-list">
+        {architecture.layers.map((layer) => (
+          <a href={`#layer-${layer.id}`} key={layer.id} style={{ '--accent': layer.accent } as StyleVars}>
+            <GlowIcon accent={layer.accent}><layer.Icon size={16} /></GlowIcon>
+            <span>{layer.title}</span>
+            <ArrowRight size={14} />
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function LayerFeature({ layer }: { layer: typeof architecture.layers[number] }) {
+  return (
+    <article id={`layer-${layer.id}`} className="layer-feature" style={{ '--accent': layer.accent } as StyleVars}>
+      <div className="layer-feature-copy">
+        <h3><layer.Icon size={16} /> <span>{layer.title}</span></h3>
+        <p>{layer.lead}</p>
+        <div className="pill-stack">{layer.points.map((point) => <span key={point}>{point}</span>)}</div>
+      </div>
+      <img src={layer.image} alt="" />
+    </article>
+  )
+}
+
+export function Architecture() {
+  const architectureSlides = [
+    <LayerDeck key="deck" />,
+    ...architecture.layers.map((layer) => <LayerFeature key={layer.id} layer={layer} />),
+  ]
+
+  return (
+    <section id="architecture" className="home-section architecture-section">
+      <div className="page-shell">
+        <Eyebrow>{architecture.eyebrow}</Eyebrow>
+        <Headline lines={architecture.title} blue={['four layers.']} />
+        <div className="section-copy">{architecture.description.map((line) => <p key={line}>{line}</p>)}</div>
+        <div className="mobile-carousel architecture-carousel">
+          <Carousel items={architectureSlides} ariaLabel="Saikan architecture layers" renderItem={(slide) => slide} />
+        </div>
+        <div className="desktop-architecture">
+          <LayerDeck />
+          {architecture.layers.map((layer) => <LayerFeature key={layer.id} layer={layer} />)}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export function BusinessLines() {
+  return (
+    <section id="business-lines" className="home-section business-section">
+      <div className="page-shell">
+        <Eyebrow>{businessLines.eyebrow}</Eyebrow>
+        <Headline lines={businessLines.titleLines} />
+        <p className="section-copy single">{businessLines.description}</p>
+        <div className="business-grid">
+          {businessLines.items.map((item) => (
+            <article className={`business-card ${item.key}`} key={item.key}>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+              <img src={item.asset} alt="" />
+              <a href={`#${item.targetId}`}>{item.cta} <ArrowRight size={13} /></a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function CompareCard({ title, items, negative, image }: { title: string; items: string[]; negative?: boolean; image: string }) {
+  return (
+    <article className={`compare-card ${negative ? 'negative' : 'positive'}`}>
+      <div>
+        <p>{title}</p>
+        <ul>
+          {items.map((item) => (
+            <li key={item}>{negative ? <X size={13} /> : <Check size={13} />}<span>{item}</span></li>
+          ))}
+        </ul>
+      </div>
+      <img src={image} alt="" />
+    </article>
+  )
+}
+
+function ProcessCard() {
+  const icons = [Search, Box, RefreshCw]
+  return (
+    <article className="process-card">
+      <Eyebrow>Our Process</Eyebrow>
+      <h3>From discovery to operational intelligence.</h3>
+      <div className="process-list">
+        {clientSolutions.steps.map(([number, title, body], index) => {
+          const Icon = icons[index]
+          return (
+            <div className="process-step" key={String(number)}>
+              <span className="step-number">{String(number)}</span>
+              <GlowIcon><Icon size={21} /></GlowIcon>
+              <div>
+                <strong>{String(title)}</strong>
+                <p>{String(body)}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </article>
+  )
+}
+
+export function ClientSolutions() {
+  const slides = [
+    <div className="compare-pair" key="compare">
+      <CompareCard title="Before Saikan" items={clientSolutions.beforeItems} negative image="/assets/sketch/client-before.png" />
+      <div className="down-badge"><ArrowDown size={22} /></div>
+      <CompareCard title="After Saikan" items={clientSolutions.afterItems} image="/assets/sketch/client-after.png" />
+    </div>,
+    <ProcessCard key="process" />,
+  ]
+
+  return (
+    <section id="client-solutions" className="home-section client-section">
+      <div className="page-shell">
+        <Eyebrow>{clientSolutions.eyebrow}</Eyebrow>
+        <Headline lines={clientSolutions.titleLines} />
+        <p className="section-copy single">{clientSolutions.description}</p>
+        <div className="mobile-carousel client-carousel"><Carousel items={slides} ariaLabel="Client solution process" renderItem={(slide) => slide} /></div>
+        <div className="desktop-client">
+          <div className="compare-pair">{slides[0]}</div>
+          <ProcessCard />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ProductCard({ item, compact = false }: { item: typeof products.items[number]; compact?: boolean }) {
+  const [name, audience, body, logo, accent, points] = item
+  return (
+    <article className={`product-card ${compact ? 'compact' : ''}`} style={{ '--accent': String(accent) } as StyleVars}>
+      <div>
+        <p className="tag">{String(audience)}</p>
+        <h3>{String(name)}</h3>
+        <p>{String(body)}</p>
+        <div className="pill-stack">{(points as string[]).map((point) => <span key={point}>{point}</span>)}</div>
+      </div>
+      <img src={String(logo)} alt={`${String(name)} logo`} />
+    </article>
+  )
+}
+
+export function Products() {
+  const slides = [
+    <div className="product-grid" key="grid">{products.items.map((item) => <ProductCard key={String(item[0])} item={item} compact />)}</div>,
+    ...products.items.map((item) => <ProductCard key={String(item[0])} item={item} />),
+  ]
+
+  return (
+    <section id="products" className="home-section products-section">
+      <div className="page-shell">
+        <div className="product-hero">
+          <div>
+            <Eyebrow>{products.eyebrow}</Eyebrow>
+            <Headline lines={products.titleLines} blue={products.highlightedLines} />
+            <p className="section-copy single">{products.description}</p>
+          </div>
+          <img src="/assets/sketch/products-hero-art.webp" alt="" />
+        </div>
+        <div className="mobile-carousel products-carousel"><Carousel items={slides} ariaLabel="Saikan products" renderItem={(slide) => slide} /></div>
+        <div className="desktop-products product-grid">{products.items.map((item) => <ProductCard key={String(item[0])} item={item} compact />)}</div>
+      </div>
+    </section>
+  )
+}
+
+function VentureOrbit() {
+  return <img src="/assets/sketch/venture-orbit-art.webp" alt="" className="venture-orbit" />
+}
+
+function VentureCard({ item, compact = false }: { item: typeof ventureStudio.items[number]; compact?: boolean }) {
+  const [name, eyebrow, body, logo, accent] = item
+  const tags = String(eyebrow).split(' ')
+  return (
+    <article className={`venture-card ${compact ? 'compact' : ''}`} style={{ '--accent': String(accent) } as StyleVars}>
+      <div>
+        <h3>{String(name)}</h3>
+        <p className="tag">{String(eyebrow)}</p>
+        <p>{String(body)}</p>
+        <div className="pill-stack">{tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+      </div>
+      <img src={String(logo)} alt={`${String(name)} logo`} />
+      <ArrowRight size={14} className="card-arrow" />
+    </article>
+  )
+}
+
+function VentureFeature({ item }: { item: typeof ventureStudio.items[number] }) {
+  const [, eyebrow, body, logo] = item
+  const titleMap: Record<string, string> = {
+    'Research Lab': 'Applied research for the next operating systems.',
+    'Consumer AI': 'A lightweight system for everyday momentum.',
+    'Food Venture': 'A venture built from one shared stack.',
+  }
+  return (
+    <div className="venture-feature">
+      <div>
+        <Eyebrow>{String(eyebrow)}</Eyebrow>
+        <h3>{titleMap[String(eyebrow)]}</h3>
+        <p>{String(body)}</p>
+        <div className="pill-stack">{String(eyebrow).split(' ').map((tag) => <span key={tag}>{tag}</span>)}</div>
+      </div>
+      <img src={String(logo)} alt="" />
+    </div>
+  )
+}
+
+export function VentureStudio() {
+  const more = ['More', 'Venture Studio', 'Explore the companies built from the Saikan operating stack.', '/assets/sketch/logo-nest.png', '#82a5ff'] as typeof ventureStudio.items[number]
+  const slides = [
+    <div className="venture-grid" key="grid">
+      {ventureStudio.items.map((item) => <VentureCard item={item} key={String(item[0])} compact />)}
+      <VentureCard item={more} compact />
+    </div>,
+    ...ventureStudio.items.map((item) => <VentureFeature key={String(item[0])} item={item} />),
+  ]
+
+  return (
+    <section id="venture-studio" className="home-section venture-section">
+      <div className="page-shell">
+        <div className="venture-hero">
+          <div>
+            <Eyebrow>{ventureStudio.eyebrow}</Eyebrow>
+            <Headline lines={ventureStudio.titleLines} blue={ventureStudio.highlightedLines} />
+            <p className="section-copy single">{ventureStudio.description}</p>
+          </div>
+          <VentureOrbit />
+        </div>
+        <div className="mobile-carousel venture-carousel"><Carousel items={slides} ariaLabel="Saikan venture studio" renderItem={(slide) => slide} /></div>
+        <div className="desktop-ventures venture-grid">
+          {ventureStudio.items.map((item) => <VentureCard item={item} key={String(item[0])} compact />)}
+          <VentureCard item={more} compact />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export function FinalCTA() {
+  return (
+    <section id="final-cta" className="home-section final-section">
+      <div className="page-shell final-shell">
+        <Mark />
+        <h2>Built to scale.<br />Designed to compound.</h2>
+        <p>One system. Three business lines.<br />Infinite potential.</p>
+        <div className="final-actions">
+          <Button href="#operating-model" variant="secondary">Explore Solutions</Button>
+          <Button href="/contact" variant="primary">Book a Call <ArrowRight size={13} /></Button>
+        </div>
+        <div className="planet-line" />
+        <footer>© 2026 SAIKAN HOLDINGS<br /><span>8 ventures under management</span><br /><span>Terms · Privacy</span></footer>
+      </div>
+    </section>
+  )
+}
