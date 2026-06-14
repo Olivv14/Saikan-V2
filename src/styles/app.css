@@ -25,6 +25,7 @@
 html, body, #root { min-height: 100%; overflow-x: clip; }
 body { margin: 0; background: #000; }
 img, svg, video { max-width: 100%; display: block; }
+img { object-fit: contain; }
 button, input, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 a.bg-white, button.bg-white { color: #000 !important; }
@@ -219,10 +220,10 @@ a.bg-white\/90, button.bg-white\/90 { color: #000 !important; }
   .site-menu { display: none; }
   .mobile-cta-bar { display: grid; }
   .home-section { padding: 40px 0; }
-  .hero-section { padding-top: 18px; min-height: auto; }
-  .hero-grid { display: block; }
-  .hero-art { min-height: 215px; justify-content: flex-end; margin-top: -206px; margin-right: -26px; z-index: 0; opacity: .94; }
-  .hero-art img { width: 185px; }
+  .hero-section { padding-top: 18px; min-height: 540px; align-items: start; }
+  .hero-grid { display: block; min-height: 500px; }
+  .hero-art { position: absolute; top: -12px; right: -8px; width: 240px; min-height: 360px; justify-content: flex-end; margin: 0; z-index: 0; opacity: .98; }
+  .hero-art img { width: 240px; height: auto; }
   .hero-copy { position: relative; z-index: 2; max-width: 260px; }
   .hero-title { font-size: 34px; line-height: 1.04; letter-spacing: -.065em; }
   .hero-lead { margin-top: 25px; font-size: 13px; line-height: 1.55; }
@@ -233,6 +234,26 @@ a.bg-white\/90, button.bg-white\/90 { color: #000 !important; }
   .thesis-section { padding-top: 8px; }
   .architecture-section, .business-section, .client-section, .products-section, .venture-section { padding-top: 30px; }
   .desktop-products.product-grid, .desktop-ventures.venture-grid { display: none; }
+  .layer-deck-card { grid-template-columns: 156px minmax(0, 1fr); }
+  .layer-deck-card > img { width: 156px; height: auto; }
+  .layer-feature { grid-template-columns: minmax(0, 118px) 177px; }
+  .layer-feature .layer-phone-img { width: 177px; height: 225px; max-height: none; }
+  .business-card.solutions img { width: 197px; height: 154px; max-height: none; right: -8px; bottom: 22px; }
+  .business-card.products img { width: 114px; height: 156px; max-height: none; right: 16px; bottom: 22px; }
+  .business-card.studio img { width: 172px; height: 206px; max-height: none; right: -6px; bottom: -4px; }
+  .compare-card { position: relative; }
+  .compare-card img { position: absolute; }
+  .compare-card.negative img { width: 174px; height: 150px; max-height: none; right: -11px; bottom: -12px; transform: translateX(2px) translateY(8px); }
+  .compare-card.positive img { width: 165px; height: 110px; max-height: none; right: -8px; bottom: 9px; }
+  .product-hero { grid-template-columns: minmax(0, 1fr) 180px; gap: 0; }
+  .product-hero > img { width: 180px; height: 180px; }
+  .product-card.compact img { width: 30px; height: 30px; margin-bottom: 26px; }
+  .product-card:not(.compact) img { width: 89px; height: 88px; }
+  .venture-hero { grid-template-columns: minmax(0, 1fr) 147px; gap: 0; }
+  .venture-orbit { width: 147px; height: 143px; }
+  .venture-card.compact img { width: 38px; height: 38px; }
+  .venture-card:not(.compact) img, .venture-feature img { width: 88px; height: 88px; }
+  .final-shell .saikan-mark { width: 76px; height: 76px; }
   .process-card .eyebrow, .process-card h3 { margin-left: 0; padding-left: 0; }
   .products-section .section-title, .venture-section .section-title { font-size: 30px; }
 }

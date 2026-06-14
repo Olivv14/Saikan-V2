@@ -160,7 +160,7 @@ function LayerFeature({ layer }: { layer: typeof architecture.layers[number] }) 
         <p>{layer.lead}</p>
         <div className="pill-stack">{layer.points.map((point) => <span key={point}>{point}</span>)}</div>
       </div>
-      <img src={layer.image} alt="" />
+      <img src={layer.image} alt="" className="layer-phone-img" />
     </article>
   )
 }
@@ -257,9 +257,9 @@ function ProcessCard() {
 export function ClientSolutions() {
   const slides = [
     <div className="compare-pair" key="compare">
-      <CompareCard title="Before Saikan" items={clientSolutions.beforeItems} negative image="/assets/sketch/client-before.png" />
+      <CompareCard title="Before Saikan" items={clientSolutions.beforeItems} negative image="/assets/sketch/before-saikan.jpg" />
       <div className="down-badge"><ArrowDown size={22} /></div>
-      <CompareCard title="After Saikan" items={clientSolutions.afterItems} image="/assets/sketch/client-after.png" />
+      <CompareCard title="After Saikan" items={clientSolutions.afterItems} image="/assets/sketch/dashboard.jpeg" />
     </div>,
     <ProcessCard key="process" />,
   ]
@@ -310,7 +310,7 @@ export function Products() {
             <Headline lines={products.titleLines} blue={products.highlightedLines} />
             <p className="section-copy single">{products.description}</p>
           </div>
-          <img src="/assets/sketch/products-hero-art.webp" alt="" />
+          <img src="/assets/sketch/products-hero-art 1.jpg" alt="" />
         </div>
         <div className="mobile-carousel products-carousel"><Carousel items={slides} ariaLabel="Saikan products" renderItem={(slide) => slide} /></div>
         <div className="desktop-products product-grid">{products.items.map((item) => <ProductCard key={String(item[0])} item={item} compact />)}</div>
