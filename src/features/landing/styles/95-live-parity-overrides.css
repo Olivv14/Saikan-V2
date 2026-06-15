@@ -1,0 +1,609 @@
+/* Live parity overrides extracted from the current saikan.co visual target.
+   These are kept separate from the section source styles so the landing page
+   remains editable while preserving the deployed visual ordering and spacing. */
+.phone-frame .business-lines .business-card {
+  --product-color: #6fa0ff;
+  --product-border: rgba(91, 132, 255, .24);
+  --product-glow: rgba(70, 118, 255, .1);
+  min-height:240px!important;
+  padding:22px 18px 18px!important;
+  overflow:hidden!important;
+  border:1px solid var(--product-border)!important;
+  border-radius:18px!important;
+  background:radial-gradient(ellipse 180px 122px at 50% -8px,var(--product-glow) 0%,color-mix(in srgb,var(--product-glow) 48%,transparent) 42%,transparent 74%),linear-gradient(180deg,#ffffff09,#ffffff03)!important;
+  box-shadow:0 16px 42px #0000003d,inset 0 1px #ffffff0a!important
+}
+.phone-frame .business-lines .business-card.solutions {
+  --product-color: #3e80ff;
+  --product-border: rgba(56, 111, 255, .24);
+  --product-glow: rgba(42, 95, 255, .1)
+}
+.phone-frame .business-lines .business-card.products {
+  --product-color: #45dfd0;
+  --product-border: rgba(68, 222, 207, .21);
+  --product-glow: rgba(42, 211, 197, .085)
+}
+.phone-frame .business-lines .business-card.studio {
+  --product-color: #ffad45;
+  --product-border: rgba(255, 169, 64, .22);
+  --product-glow: rgba(255, 160, 45, .08)
+}
+.phone-frame .business-lines .business-card:before,.phone-frame .business-lines .business-card:after {
+  display:none!important;
+  content:none!important;
+  pointer-events:none!important
+}
+.phone-frame .business-lines .business-card:before {
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  border-radius:inherit!important;
+  background:transparent!important;
+  opacity:1!important
+}
+.phone-frame .business-lines .business-card:after {
+  position:absolute!important;
+  inset:1px!important;
+  z-index:1!important;
+  border-radius:inherit!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.026),transparent 72%)!important;
+  opacity:1!important
+}
+.phone-frame .business-lines .business-card-content {
+  width:44%!important;
+  max-width:188px!important;
+  min-height:200px!important;
+  height:100%!important;
+  justify-content:flex-start!important
+}
+.phone-frame .business-lines .business-card.solutions h3,.phone-frame .business-lines .business-card.products h3 {
+  white-space:nowrap!important;
+  font-size:23px!important;
+  letter-spacing:-.062em!important
+}
+.phone-frame .business-lines .business-cards {
+  gap:24px!important
+}
+.phone-frame .business-lines .business-card.solutions .business-asset {
+  top:50%!important;
+  right:-4px!important;
+  width:220px!important;
+  height:216px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.solutions .business-asset img {
+  width:202px!important;
+  height:auto!important;
+  max-width:202px!important;
+  max-height:178px!important;
+  mix-blend-mode:screen!important;
+  filter:contrast(1.12) brightness(1.08) saturate(1.05)!important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 50%,#000 58%,rgba(0,0,0,.7) 76%,transparent 96%)!important;
+  mask-image:radial-gradient(ellipse at 50% 50%,#000 58%,rgba(0,0,0,.7) 76%,transparent 96%)!important
+}
+.phone-frame .business-lines .business-card.products .business-asset {
+  top:50%!important;
+  right:2px!important;
+  width:184px!important;
+  height:206px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.products .business-asset img {
+  width:auto!important;
+  height:164px!important;
+  max-width:164px!important;
+  max-height:164px!important
+}
+.phone-frame .business-lines .business-card.studio .business-asset {
+  top:50%!important;
+  right:14px!important;
+  width:180px!important;
+  height:204px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.studio .business-asset img {
+  width:auto!important;
+  height:196px!important;
+  max-width:174px!important;
+  max-height:196px!important
+}
+.phone-frame .business-lines .business-cta {
+  white-space:nowrap!important;
+  max-width:none!important;
+  min-width:0!important;
+  height:32px!important;
+  margin-top:auto!important;
+  padding:0 12px!important;
+  font-size:8.6px!important;
+  letter-spacing:.11em!important;
+  line-height:1!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back {
+  z-index:0!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before {
+  z-index:1!important;
+  background:transparent!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before ul,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before ul,.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-head,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-head {
+  z-index:3!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card:before,#saikan-client-detail .client-solution-slide-ba .client-ba-card:before,.bf-scope #saikan-client-detail .client-solution-slide-process .client-process:before,#saikan-client-detail .client-solution-slide-process .client-process:before {
+  border:1px solid rgba(62,128,255,.2)!important;
+  box-shadow:0 16px 42px #0000003d,inset 0 1px #ffffff0a!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before:before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before:before {
+  background:radial-gradient(ellipse 180px 122px at 50% -8px,rgba(255,76,83,.1) 0%,rgba(255,76,83,.048) 42%,transparent 74%),linear-gradient(180deg,#ffffff08,#ffffff03)!important;
+  border-color:#ff4c5336!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after:before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after:before,.bf-scope #saikan-client-detail .client-solution-slide-process .client-process:before,#saikan-client-detail .client-solution-slide-process .client-process:before {
+  background:radial-gradient(ellipse 180px 122px at 50% -8px,rgba(62,128,255,.11) 0%,rgba(62,128,255,.052) 42%,transparent 74%),linear-gradient(180deg,#ffffff08,#ffffff03)!important;
+  border-color:#386fff3d!important
+}
+.bf-scope .venture-detail .venture-detail-copy .landing-title-line>span {
+  white-space:nowrap!important
+}
+.bf-scope .venture-detail .venture-detail-inner {
+  grid-template-columns:minmax(0,50%) minmax(0,50%)!important
+}
+.bf-scope .venture-detail .venture-orbit-art {
+  height:224px!important;
+  margin:2px 0 0!important;
+  place-items:center!important
+}
+.bf-scope .venture-detail .venture-orbit-art img {
+  width:min(214px,100%)!important
+}
+@media(max-width:380px) {
+  .hero-frame+.bf-scope .thesis {
+  padding-top:10px!important
+}
+.phone-frame .system-v138-overview .layer-card {
+  grid-template-columns:28px minmax(0,1fr) 14px!important;
+  column-gap:6px!important;
+  min-height:40px!important;
+  height:40px!important
+}
+.phone-frame .system-v138-overview .layer-text h3 {
+  font-size:10.5px!important
+}
+.phone-frame .system-v138-overview .layer-arrow {
+  width:14px!important;
+  font-size:15px!important
+}
+.phone-frame .system-v138-overview .layer-card-icon {
+  width:26px!important;
+  height:26px!important;
+  border-radius:9px!important
+}
+.phone-frame .system-v138-overview .layer-card-icon svg {
+  width:15px!important;
+  height:15px!important
+}
+.phone-frame .business-lines .business-card {
+  min-height:232px!important;
+  padding:20px 16px 16px!important
+}
+.phone-frame .business-lines .business-cards {
+  gap:22px!important
+}
+.phone-frame .business-lines .business-card-content {
+  width:54%!important;
+  max-width:184px!important;
+  min-height:196px!important;
+  height:100%!important
+}
+.phone-frame .business-lines .business-card.solutions h3,.phone-frame .business-lines .business-card.products h3 {
+  font-size:20.8px!important;
+  letter-spacing:-.066em!important
+}
+.phone-frame .business-lines .business-card.solutions .business-asset {
+  top:50%!important;
+  right:-6px!important;
+  width:192px!important;
+  height:198px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.solutions .business-asset img {
+  width:178px!important;
+  max-width:178px!important;
+  max-height:158px!important
+}
+.phone-frame .business-lines .business-card.products .business-asset {
+  top:50%!important;
+  right:-2px!important;
+  width:164px!important;
+  height:184px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.products .business-asset img {
+  height:148px!important;
+  max-width:148px!important;
+  max-height:148px!important
+}
+.phone-frame .business-lines .business-card.studio .business-asset {
+  top:50%!important;
+  right:10px!important;
+  width:158px!important;
+  height:190px!important;
+  transform:translateY(-50%)!important
+}
+.phone-frame .business-lines .business-card.studio .business-asset img {
+  height:184px!important;
+  max-width:154px!important;
+  max-height:184px!important
+}
+.phone-frame .business-lines .business-cta {
+  height:30px!important;
+  padding:0 10px!important;
+  font-size:8.2px!important;
+  letter-spacing:.1em!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before li,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before li {
+  font-size:11px!important;
+  letter-spacing:-.058em!important;
+  padding-left:20px!important
+}
+.bf-scope .venture-detail .venture-detail-inner {
+  grid-template-columns:minmax(0,53%) minmax(0,47%)!important
+}
+.bf-scope .venture-detail .venture-detail-copy .landing-section-header__title {
+  font-size:30px!important
+}
+.bf-scope .venture-detail .venture-orbit-art {
+  height:198px!important;
+  margin-top:6px!important
+}
+.bf-scope .venture-detail .venture-orbit-art img {
+  width:min(188px,100%)!important
+}
+
+}
+#root,.site-footer-inner.phone-frame {
+  padding-bottom:0!important
+}
+.site-footer-legal {
+  padding-bottom:8px!important
+}
+.site-footer-links {
+  margin-bottom:0!important
+}
+.site-fixed-footer {
+  padding-bottom:max(10px,env(safe-area-inset-bottom))!important
+}
+.site-fixed-footer .site-fixed-footer__actions {
+  justify-content:flex-end!important;
+  gap:7px!important;
+  width:auto!important;
+  max-width:none!important
+}
+.site-footer-actions.landing-cta-row {
+  flex-direction:column!important;
+  align-items:stretch!important;
+  justify-content:center!important;
+  gap:10px!important;
+  width:190px!important;
+  max-width:190px!important
+}
+.site-fixed-footer .landing-cta,.site-footer-actions .landing-cta {
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  height:32px!important;
+  min-height:32px!important;
+  padding:0 9px!important;
+  border-radius:8px!important;
+  font-size:9.6px!important;
+  letter-spacing:-.015em!important;
+  font-weight:720!important
+}
+.site-fixed-footer .landing-cta--secondary,.site-footer-actions .landing-cta--secondary {
+  width:104px!important
+}
+.site-fixed-footer .landing-cta--primary,.site-footer-actions .landing-cta--primary {
+  width:92px!important
+}
+.site-footer-actions.landing-cta-row {
+  justify-content:center!important
+}
+.site-footer-actions .landing-cta {
+  width:100%!important;
+  height:34px!important;
+  min-height:34px!important
+}
+@media(max-width:380px) {
+  .site-fixed-footer .site-fixed-footer__actions {
+  gap:6px!important
+}
+.site-footer-actions.landing-cta-row {
+  gap:8px!important;
+  width:180px!important;
+  max-width:180px!important
+}
+.site-fixed-footer .landing-cta,.site-footer-actions .landing-cta {
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 7px!important;
+  font-size:8.8px!important
+}
+.site-fixed-footer .landing-cta--secondary,.site-footer-actions .landing-cta--secondary {
+  width:96px!important
+}
+.site-fixed-footer .landing-cta--primary,.site-footer-actions .landing-cta--primary {
+  width:84px!important
+}
+.site-footer-actions .landing-cta {
+  width:100%!important
+}
+
+}
+.phone-frame .business-lines .business-card.products {
+  --product-color: #f4f3ef;
+  --product-border: rgba(244, 243, 239, .22);
+  --product-glow: rgba(244, 243, 239, .075)
+}
+.bf-scope .venture-detail .venture-orbit-art {
+  height:248px!important;
+  margin-top:-2px!important
+}
+.bf-scope .venture-detail .venture-orbit-art img {
+  width:min(246px,112%)!important;
+  max-width:none!important
+}
+.bf-scope #saikan-client-detail .client-solutions-slider,#saikan-client-detail .client-solutions-slider {
+  --client-slide-h: 428px !important;
+  height:calc(var(--client-slide-h) + 42px)!important;
+  min-height:calc(var(--client-slide-h) + 42px)!important;
+  max-height:calc(var(--client-slide-h) + 42px)!important;
+  border-bottom:0!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,#saikan-client-detail .client-solution-slide-ba .client-ba-card {
+  left:0!important;
+  right:0!important;
+  height:188px!important;
+  min-height:188px!important;
+  max-height:188px!important;
+  padding:14px 16px 10px!important;
+  background:radial-gradient(ellipse 180px 122px at 50% -8px,var(--client-card-glow) 0%,color-mix(in srgb,var(--client-card-glow) 48%,transparent) 42%,transparent 74%),linear-gradient(180deg,#ffffff08,#ffffff03)!important;
+  box-shadow:0 16px 42px #0000003d,inset 0 1px #ffffff0a!important;
+  border-radius:18px!important;
+  border:1px solid var(--client-card-border)!important;
+  overflow:hidden!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before {
+  height:188px!important;
+  min-height:188px!important;
+  max-height:188px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before {
+  --client-card-border: rgba(255, 76, 83, .21);
+  --client-card-glow: rgba(255, 76, 83, .1);
+  background:transparent!important;
+  box-shadow:0 16px 42px #0000003d,inset 0 1px #ffffff0a!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before {
+  --client-card-border: rgba(255, 76, 83, .21);
+  --client-card-glow: rgba(255, 76, 83, .1)
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  --client-card-border: rgba(56, 111, 255, .24);
+  --client-card-glow: rgba(62, 128, 255, .11)
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before,.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  grid-template-columns:minmax(0,58%) minmax(0,42%)!important;
+  grid-template-rows:auto minmax(0,1fr)!important;
+  column-gap:10px!important;
+  row-gap:0!important;
+  align-items:center!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  top:218px!important;
+  overflow:hidden!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head,#saikan-client-detail .client-solution-slide-ba .client-ba-head {
+  grid-column:1!important;
+  grid-row:1!important;
+  align-self:start!important;
+  margin:0!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head span,#saikan-client-detail .client-solution-slide-ba .client-ba-head span {
+  font-size:10px!important;
+  letter-spacing:.18em!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card ul,#saikan-client-detail .client-solution-slide-ba .client-ba-card ul {
+  gap:7px!important;
+  grid-column:1!important;
+  grid-row:1 / -1!important;
+  align-self:center!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li,#saikan-client-detail .client-solution-slide-ba .client-ba-card li {
+  font-size:12px!important;
+  line-height:1.16!important;
+  letter-spacing:-.04em!important;
+  padding-left:22px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before li,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before li {
+  white-space:nowrap!important;
+  font-size:11.6px!important;
+  letter-spacing:-.044em!important;
+  padding-left:20px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-arrow,#saikan-client-detail .client-solution-slide-ba .client-ba-arrow {
+  top:181px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card:before,#saikan-client-detail .client-solution-slide-ba .client-ba-card:before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  border-radius:18px!important;
+  border:0!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  background:radial-gradient(ellipse 190px 126px at 50% -8px,var(--client-card-glow) 0%,color-mix(in srgb,var(--client-card-glow) 62%,transparent) 40%,transparent 74%),linear-gradient(90deg,#00000057,#0003 42%,#00000005),linear-gradient(180deg,transparent 0%,transparent 62%,rgba(0,0,0,.2) 100%)!important;
+  mix-blend-mode:screen!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after:before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after:before {
+  inset:0!important;
+  height:auto!important;
+  z-index:2!important;
+  border:0!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  background:radial-gradient(ellipse 190px 126px at 50% -8px,var(--client-card-glow) 0%,color-mix(in srgb,var(--client-card-glow) 62%,transparent) 40%,transparent 74%),linear-gradient(90deg,#00000057,#0003 42%,#00000005)!important;
+  mix-blend-mode:screen!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back {
+  z-index:0!important;
+  overflow:visible!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual {
+  grid-column:2!important;
+  grid-row:1 / -1!important;
+  align-self:center!important;
+  justify-self:end!important;
+  z-index:1!important;
+  width:136%!important;
+  overflow:visible!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
+  position:relative!important;
+  inset:auto!important;
+  z-index:1!important;
+  width:100%!important;
+  max-width:214px!important;
+  max-height:206px!important;
+  height:auto!important;
+  margin:0 auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+  opacity:1!important;
+  mix-blend-mode:normal!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img {
+  inset:50% auto auto 70%!important;
+  width:204px!important;
+  max-width:214px!important;
+  max-height:206px!important;
+  z-index:0!important;
+  opacity:.98!important;
+  transform:translate(calc(-50% + 10px),-50%)!important;
+  filter:contrast(1.22) brightness(1.12) saturate(1.28)!important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 50%,#000 60%,rgba(0,0,0,.72) 78%,transparent 98%)!important;
+  mask-image:radial-gradient(ellipse at 50% 50%,#000 60%,rgba(0,0,0,.72) 78%,transparent 98%)!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
+  max-width:202px!important;
+  max-width:226px!important;
+  max-height:208px!important;
+  transform:translate(18px)!important;
+  -webkit-mask-image:radial-gradient(ellipse at 54% 48%,#000 58%,rgba(0,0,0,.78) 76%,transparent 98%)!important;
+  mask-image:radial-gradient(ellipse at 54% 48%,#000 58%,rgba(0,0,0,.78) 76%,transparent 98%)!important
+}
+@media(max-width:380px) {
+  .bf-scope .venture-detail .venture-orbit-art {
+  height:218px!important
+}
+.bf-scope .venture-detail .venture-orbit-art img {
+  width:min(212px,114%)!important
+}
+.bf-scope #saikan-client-detail .client-solutions-slider,#saikan-client-detail .client-solutions-slider {
+  --client-slide-h: 408px !important;
+  height:calc(var(--client-slide-h) + 40px)!important;
+  min-height:calc(var(--client-slide-h) + 40px)!important;
+  max-height:calc(var(--client-slide-h) + 40px)!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before,.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,#saikan-client-detail .client-solution-slide-ba .client-ba-card {
+  left:0!important;
+  right:0!important;
+  height:178px!important;
+  min-height:178px!important;
+  max-height:178px!important;
+  padding:12px 14px 8px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-card.before {
+  padding:12px 14px 8px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before,#saikan-client-detail .client-solution-slide-ba .client-ba-card.before,.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  grid-template-columns:minmax(0,58%) minmax(0,42%)!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  top:206px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-arrow,#saikan-client-detail .client-solution-slide-ba .client-ba-arrow {
+  top:170px!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img,#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img {
+  left:77%!important;
+  width:166px!important;
+  max-width:166px!important;
+  max-height:170px!important;
+  transform:translate(calc(-50% + 8px),-50%)!important
+}
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
+  max-width:198px!important;
+  max-height:188px!important;
+  transform:translate(16px)!important
+}
+
+}
+
+/* Resolve legacy Saikan-V2 product-card globals for the structured landing.
+   src/styles/app.css defines mobile body padding and product-card split grids;
+   the live landing uses its own footer and compact block cards. */
+#hero .landing-cta-row {
+  width: 190px !important;
+  gap: 10px !important;
+}
+
+#hero .landing-cta {
+  min-height: 42px !important;
+  height: 42px !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
+
+body {
+  padding-bottom: 0 !important;
+}
+
+.phone-frame.hero-frame {
+  padding-bottom: 0 !important;
+}
+
+.bf-scope .thesis {
+  min-height: 578px !important;
+  border-top: 0 !important;
+}
+
+.bf-scope #saikan-products-detail .product-card,
+.bf-scope #saikan-venture-detail .venture-card {
+  display: block !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  align-items: normal !important;
+  gap: 0 !important;
+}
+
+.bf-scope #saikan-products-detail .product-card-icon img,
+.bf-scope #saikan-venture-detail .venture-card-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  justify-self: auto !important;
+  object-fit: contain !important;
+}
+
+.bf-scope #saikan-products-detail .product-card-icon,
+.bf-scope #saikan-venture-detail .venture-card-icon {
+  width: 38px !important;
+  height: 38px !important;
+}
+

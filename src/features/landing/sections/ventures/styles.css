@@ -1,0 +1,388 @@
+/* Business Lines — aligned with saikan_landing v174 / v173 polish (images + flat rows) */
+
+.business-lines {
+  position: relative;
+  overflow: hidden;
+  padding-left: var(--frame-pad);
+  padding-right: var(--frame-pad);
+  padding-bottom: 0;
+  background: #000;
+}
+
+.business-lines::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  width: 430px;
+  height: 720px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.38;
+  background:
+    radial-gradient(360px 520px at 74% 40%, rgba(56, 124, 255, 0.045), transparent 66%),
+    radial-gradient(340px 440px at 24% 72%, rgba(255, 255, 255, 0.018), transparent 70%);
+  filter: blur(10px);
+}
+
+.business-lines .business-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 42px;
+  width: 100%;
+  overflow: visible;
+  background: transparent;
+}
+
+.business-lines .business-card,
+.business-lines .business-card.solutions,
+.business-lines .business-card.products,
+.business-lines .business-card.studio {
+  position: relative;
+  min-height: 204px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  isolation: isolate;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: none;
+  background-color: transparent;
+  box-shadow: none;
+  filter: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.business-lines .business-card::before,
+.business-lines .business-card::after,
+.business-lines .business-card.solutions::before,
+.business-lines .business-card.solutions::after,
+.business-lines .business-card.products::before,
+.business-lines .business-card.products::after,
+.business-lines .business-card.studio::before,
+.business-lines .business-card.studio::after {
+  display: none;
+  content: none;
+  opacity: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.business-lines .business-card:focus {
+  outline: none;
+}
+
+.business-lines .business-card:focus-visible {
+  outline: 2px solid rgba(99, 151, 255, 0.55);
+  outline-offset: 4px;
+}
+
+.business-lines .business-card.is-active {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.business-lines .business-card-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 52%;
+  max-width: 206px;
+  min-height: 204px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.business-lines .business-card h3 {
+  margin: 0 0 13px;
+  font-size: 24px;
+  line-height: 1.02;
+  letter-spacing: -0.058em;
+  color: #f4f3ef;
+  font-weight: 535;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.055);
+}
+
+.business-lines .business-card-content > p {
+  max-width: 176px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: -0.038em;
+  color: rgba(244, 243, 239, 0.65);
+  font-weight: 360;
+}
+
+/* CTA — compact rounded rectangle, centered text */
+.business-lines .business-cta {
+  position: relative;
+  z-index: 7;
+  width: fit-content;
+  max-width: 190px;
+  min-width: 146px;
+  height: 36px;
+  margin-top: auto;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid rgba(132, 165, 255, 0.34);
+  background: linear-gradient(180deg, rgba(13, 17, 29, 0.76), rgba(5, 7, 13, 0.64));
+  color: #f4f3ef;
+  font-size: 9.2px;
+  line-height: 1.02;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  font-weight: 840;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.065),
+    0 0 0 1px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(91, 132, 255, 0.1);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.business-lines .business-card.products .business-cta {
+  border-color: rgba(105, 190, 255, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.065),
+    0 0 0 1px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(70, 177, 255, 0.1);
+}
+
+.business-lines .business-card.studio .business-cta {
+  border-color: rgba(255, 185, 94, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.065),
+    0 0 0 1px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(255, 164, 70, 0.09);
+}
+
+.business-lines .business-card:hover .business-cta,
+.business-lines .business-card.is-active .business-cta {
+  transform: none;
+  border-color: rgba(148, 178, 255, 0.48);
+}
+
+.business-lines .business-card.products:hover .business-cta,
+.business-lines .business-card.products.is-active .business-cta {
+  border-color: rgba(120, 200, 255, 0.46);
+}
+
+.business-lines .business-card.studio:hover .business-cta,
+.business-lines .business-card.studio.is-active .business-cta {
+  border-color: rgba(255, 198, 120, 0.45);
+}
+
+/* Asset containers — transparent, no card glow panels */
+.business-lines .business-asset {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+  contain: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: normal;
+}
+
+.business-lines .business-asset::before,
+.business-lines .business-asset::after {
+  content: none;
+  display: none;
+}
+
+.business-lines .business-asset img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+/* Per-asset optical tuning — v173 (HTML saikan_landing v174) */
+
+/* 01 — Client Solutions */
+.business-lines .business-card.solutions .business-asset {
+  right: -14px;
+  top: 50%;
+  width: 214px;
+  height: 164px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.business-lines .business-card.solutions .business-asset img {
+  width: 196px;
+  height: 153px;
+  max-width: 196px;
+  max-height: 153px;
+  margin: 0 auto;
+  object-position: center center;
+  transform: rotate(-0.35deg);
+  opacity: 1;
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* 02 — Saikan Products */
+.business-lines .business-card.products .business-asset {
+  right: 5px;
+  top: 50%;
+  width: 184px;
+  height: 156px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.business-lines .business-card.products .business-asset img {
+  width: auto;
+  height: 100%;
+  max-width: 184px;
+  max-height: 156px;
+  margin: 0 auto;
+  object-position: center center;
+  transform: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* 03 — Venture Studio (optical box ~178×176px, img ~142×178px) */
+.business-lines .business-card.studio .business-asset {
+  right: -12px;
+  top: 50%;
+  width: 224px;
+  height: 206px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.business-lines .business-card.studio .business-asset::before {
+  content: none;
+  display: none;
+}
+
+.business-lines .business-card.studio .business-asset img {
+  width: auto;
+  height: 100%;
+  max-width: 224px;
+  max-height: 206px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center center;
+  transform: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@media (max-width: 380px) {
+  .business-lines {
+    padding-left: var(--frame-pad);
+    padding-right: var(--frame-pad);
+    padding-bottom: 0;
+  }
+
+  .business-lines .business-cards {
+    gap: 34px;
+    margin-top: 40px;
+  }
+
+  .business-lines .business-card {
+    min-height: 196px;
+  }
+
+  .business-lines .business-card-content {
+    width: 53%;
+    max-width: 194px;
+    min-height: 196px;
+    padding-top: 0;
+  }
+
+  .business-lines .business-card h3 {
+    font-size: 22px;
+  }
+
+  .business-lines .business-card-content > p {
+    font-size: 15.2px;
+    max-width: 164px;
+  }
+
+  .business-lines .business-cta {
+    min-width: 140px;
+    height: 34px;
+    margin-top: auto;
+    padding: 0 18px;
+    font-size: 8.8px;
+    letter-spacing: 0.135em;
+  }
+
+  .business-lines .business-card.solutions .business-asset {
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .business-lines .business-card.products .business-asset {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .business-lines .business-card.studio .business-asset {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

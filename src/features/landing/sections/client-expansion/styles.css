@@ -1,0 +1,910 @@
+/* Client Solutions — v166 (HTML saikan_landing v174)
+   2-slide section carousel: Before/After | Our Process. Loaded last. */
+
+.bf-scope #saikan-client-detail .client-inner,
+#saikan-client-detail .client-inner {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.bf-scope #saikan-client-detail .client-inner::before,
+#saikan-client-detail .client-inner::before {
+  content: none !important;
+  display: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-os-visual,
+.bf-scope #saikan-client-detail .client-os-caption,
+.bf-scope #saikan-client-detail .client-final,
+#saikan-client-detail .client-os-visual,
+#saikan-client-detail .client-os-caption,
+#saikan-client-detail .client-final {
+  display: none !important;
+}
+
+/* Header — fixed above slider */
+.bf-scope #saikan-client-detail .client-eyebrow,
+#saikan-client-detail .client-eyebrow {
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 0 0 15px !important;
+  color: var(--saikan-title-blue) !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  letter-spacing: 0.23em !important;
+  font-weight: 790 !important;
+  text-shadow: 0 0 16px rgba(80, 137, 255, 0.3) !important;
+}
+
+.bf-scope #saikan-client-detail .client-title,
+#saikan-client-detail .client-title {
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 0 !important;
+  max-width: 318px !important;
+  color: #f4f3ef !important;
+  font-size: 27px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.052em !important;
+  font-weight: 475 !important;
+}
+
+.bf-scope #saikan-client-detail .client-copy,
+#saikan-client-detail .client-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 17px 0 0 !important;
+  max-width: 320px !important;
+  color: rgba(244, 243, 239, 0.65) !important;
+  font-size: 16px !important;
+  line-height: 1.44 !important;
+  letter-spacing: -0.038em !important;
+  font-weight: 360 !important;
+}
+
+/* Section slider */
+.bf-scope #saikan-client-detail .client-solutions-slider,
+#saikan-client-detail .client-solutions-slider {
+  --client-slide-h: 448px;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 30px 0 0 !important;
+  height: calc(var(--client-slide-h) + 36px) !important;
+  min-height: calc(var(--client-slide-h) + 36px) !important;
+  max-height: calc(var(--client-slide-h) + 36px) !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-track,
+#saikan-client-detail .client-solutions-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+  width: 100% !important;
+  height: var(--client-slide-h) !important;
+  min-height: var(--client-slide-h) !important;
+  max-height: var(--client-slide-h) !important;
+  padding: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-padding-left: 0 !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-track::-webkit-scrollbar,
+#saikan-client-detail .client-solutions-track::-webkit-scrollbar {
+  display: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide,
+#saikan-client-detail .client-solution-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: var(--client-slide-h) !important;
+  min-height: var(--client-slide-h) !important;
+  max-height: var(--client-slide-h) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
+  position: relative !important;
+  isolation: isolate !important;
+  contain: layout paint !important;
+  background: transparent !important;
+}
+
+/* No bleed from adjacent slides while snapped */
+.bf-scope #saikan-client-detail .client-solutions-slider[data-active-slide="0"] .client-solution-slide-process,
+#saikan-client-detail .client-solutions-slider[data-active-slide="0"] .client-solution-slide-process {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-slider[data-active-slide="1"] .client-solution-slide-ba,
+#saikan-client-detail .client-solutions-slider[data-active-slide="1"] .client-solution-slide-ba {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Slide 1 — Before / After (flat) */
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-before-after,
+#saikan-client-detail .client-solution-slide-ba .client-before-after {
+  position: relative !important;
+  height: var(--client-slide-h) !important;
+  min-height: var(--client-slide-h) !important;
+  max-height: var(--client-slide-h) !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 204px !important;
+  min-height: 204px !important;
+  max-height: 204px !important;
+  padding: 18px 0 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr) !important;
+  grid-template-rows: auto minmax(0, 1fr) !important;
+  column-gap: 10px !important;
+  align-items: start !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before {
+  top: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Before image clips inside the right column — never bleeds into slide 2 */
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual {
+  position: relative !important;
+  z-index: 2 !important;
+  grid-column: 2 !important;
+  grid-row: 1 / -1 !important;
+  align-self: stretch !important;
+  justify-self: stretch !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+  top: 236px !important;
+  overflow: hidden !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual {
+  position: relative !important;
+  z-index: 2 !important;
+  grid-column: 2 !important;
+  grid-row: 1 / -1 !important;
+  align-self: stretch !important;
+  justify-self: stretch !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 4px !important;
+  height: 188px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border-radius: 18px !important;
+  opacity: 0.56 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.018),
+    rgba(255, 255, 255, 0.006) 42%,
+    transparent 82%
+  ) !important;
+  -webkit-mask-image: linear-gradient(90deg, #000 0 78%, transparent 100%) !important;
+  mask-image: linear-gradient(90deg, #000 0 78%, transparent 100%) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006) 42%, transparent 82%) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after::before {
+  background:
+    radial-gradient(230px 112px at 5% 28%, rgba(46, 145, 255, 0.08), transparent 74%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.007) 42%, transparent 82%) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card::after,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card::after {
+  display: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head,
+#saikan-client-detail .client-solution-slide-ba .client-ba-head {
+  position: relative !important;
+  z-index: 3 !important;
+  margin: 0 0 13px !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head span,
+#saikan-client-detail .client-solution-slide-ba .client-ba-head span {
+  text-transform: uppercase !important;
+  font-size: 10.6px !important;
+  letter-spacing: 0.22em !important;
+  line-height: 1 !important;
+  font-weight: 760 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-head span,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-head span {
+  color: #ff6b6b !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-head span,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-head span {
+  color: #37a9ff !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card ul,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card ul {
+  position: relative !important;
+  z-index: 3 !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid !important;
+  max-width: 100% !important;
+  gap: 9px !important;
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  align-self: start !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card li {
+  position: relative !important;
+  padding-left: 25px !important;
+  font-size: 13.35px !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.038em !important;
+  color: rgba(244, 243, 239, 0.84) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card li::before {
+  content: "×" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  width: 17px !important;
+  height: 17px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  font-size: 10.5px !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  transform: translateY(-50%) !important;
+  background: rgba(255, 72, 72, 0.13) !important;
+  color: #ff6666 !important;
+  border: 1px solid rgba(255, 72, 72, 0.22) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before li::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before li::before {
+  padding-bottom: 1px !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after li::before,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after li::before {
+  content: "✓" !important;
+  font-size: 10px !important;
+  padding-bottom: 0.5px !important;
+  background: rgba(31, 140, 255, 0.13) !important;
+  color: #49afff !important;
+  border-color: rgba(31, 140, 255, 0.25) !important;
+}
+
+/* Before / After images — see LOCK blocks at end of file */
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-arrow,
+#saikan-client-detail .client-solution-slide-ba .client-ba-arrow {
+  position: absolute !important;
+  left: 50% !important;
+  top: 216px !important;
+  transform: translateX(-50%) !important;
+  width: 42px !important;
+  height: 42px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  z-index: 6 !important;
+  margin: 0 !important;
+  color: #f4f3ef !important;
+  background: rgba(6, 8, 13, 0.82) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Slide 2 — Our Process (vertical, glowing icons) */
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-process,
+#saikan-client-detail .client-solution-slide-process .client-process {
+  position: relative !important;
+  height: var(--client-slide-h) !important;
+  min-height: var(--client-slide-h) !important;
+  max-height: var(--client-slide-h) !important;
+  margin: 0 !important;
+  padding: 20px 0 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-process::before,
+#saikan-client-detail .client-solution-slide-process .client-process::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -4px !important;
+  right: -4px !important;
+  top: 8px !important;
+  height: 430px !important;
+  border-radius: 20px !important;
+  pointer-events: none !important;
+  opacity: 0.54 !important;
+  background:
+    radial-gradient(260px 160px at 16% 18%, rgba(44, 142, 255, 0.07), transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006)) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-process-eyebrow,
+#saikan-client-detail .client-solution-slide-process .client-process-eyebrow {
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 0 0 15px !important;
+  color: var(--saikan-title-blue) !important;
+  text-transform: uppercase !important;
+  font-size: 10.8px !important;
+  letter-spacing: 0.22em !important;
+  font-weight: 760 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-process h3,
+#saikan-client-detail .client-solution-slide-process .client-process h3 {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 330px !important;
+  margin: 0 0 28px !important;
+  color: #f4f3ef !important;
+  font-size: 27px !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.058em !important;
+  font-weight: 465 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps,
+#saikan-client-detail .client-solution-slide-process .client-steps {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  gap: 22px !important;
+  margin: 0 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps article,
+#saikan-client-detail .client-solution-slide-process .client-steps article {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 32px 54px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  min-height: 86px !important;
+  padding: 0 !important;
+  align-items: start !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps article:not(:last-child)::before,
+#saikan-client-detail .client-solution-slide-process .client-steps article:not(:last-child)::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 46px !important;
+  top: 56px !important;
+  width: 1px !important;
+  height: 47px !important;
+  background: linear-gradient(rgba(70, 164, 255, 0.72), rgba(70, 164, 255, 0.08)) !important;
+  opacity: 0.72 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps span,
+#saikan-client-detail .client-solution-slide-process .client-steps span {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-step-number,
+#saikan-client-detail .client-solution-slide-process .client-step-number {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  grid-column: 1 !important;
+  align-self: start !important;
+  margin-top: 16px !important;
+  color: #58b5ff !important;
+  font-size: 12px !important;
+  font-weight: 760 !important;
+  letter-spacing: 0.06em !important;
+  padding: 0 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-step-icon,
+#saikan-client-detail .client-solution-slide-process .client-step-icon {
+  width: 54px !important;
+  height: 54px !important;
+  flex: 0 0 auto !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 16px !important;
+  color: #80c2ff !important;
+  border: 1px solid rgba(88, 166, 255, 0.36) !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(90, 170, 255, 0.16), transparent 68%),
+    rgba(6, 11, 19, 0.72) !important;
+  box-shadow:
+    0 0 0 1px rgba(67, 168, 255, 0.1) inset,
+    0 0 22px rgba(60, 118, 255, 0.28),
+    0 0 36px rgba(55, 169, 255, 0.1) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-step-icon svg,
+#saikan-client-detail .client-solution-slide-process .client-step-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  filter: drop-shadow(0 0 6px rgba(100, 180, 255, 0.5)) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps strong,
+#saikan-client-detail .client-solution-slide-process .client-steps strong {
+  display: block !important;
+  color: #f4f3ef !important;
+  font-size: 16.4px !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 590 !important;
+  text-transform: uppercase !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-process .client-steps p,
+#saikan-client-detail .client-solution-slide-process .client-steps p {
+  margin: 7px 0 0 !important;
+  max-width: 270px !important;
+  color: rgba(244, 243, 239, 0.57) !important;
+  font-size: 13.4px !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.032em !important;
+}
+
+/* Dots */
+.bf-scope #saikan-client-detail .client-solutions-dots,
+#saikan-client-detail .client-solutions-dots {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  pointer-events: auto !important;
+  z-index: 7 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-dot,
+#saikan-client-detail .client-solutions-dot {
+  appearance: none !important;
+  border: 0 !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 999px !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  transition:
+    width 0.22s ease,
+    background 0.22s ease,
+    opacity 0.22s ease !important;
+  opacity: 0.9 !important;
+  cursor: pointer !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-dot.is-active,
+#saikan-client-detail .client-solutions-dot.is-active {
+  width: 28px !important;
+  background: linear-gradient(90deg, #6da8ff, #9aa4ff) !important;
+  box-shadow: 0 0 16px rgba(105, 145, 255, 0.32) !important;
+}
+
+@media (max-width: 420px) {
+  .bf-scope #saikan-client-detail .client-solutions-slider,
+  #saikan-client-detail .client-solutions-slider {
+    --client-slide-h: 436px;
+    margin-top: 28px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card {
+    height: 198px !important;
+    min-height: 198px !important;
+    max-height: 198px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+    top: 228px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card::before,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card::before {
+    height: 182px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-arrow,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-arrow {
+    top: 207px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card li {
+    font-size: 12.8px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process,
+  #saikan-client-detail .client-solution-slide-process .client-process {
+    padding-top: 18px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process h3,
+  #saikan-client-detail .client-solution-slide-process .client-process h3 {
+    font-size: 26px !important;
+    margin-bottom: 26px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps,
+  #saikan-client-detail .client-solution-slide-process .client-steps {
+    gap: 20px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps article,
+  #saikan-client-detail .client-solution-slide-process .client-steps article {
+    min-height: 82px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .bf-scope #saikan-client-detail .client-solutions-slider,
+  #saikan-client-detail .client-solutions-slider {
+    --client-slide-h: 416px;
+    margin-top: 26px !important;
+    height: calc(var(--client-slide-h) + 34px) !important;
+    min-height: calc(var(--client-slide-h) + 34px) !important;
+    max-height: calc(var(--client-slide-h) + 34px) !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-title,
+  #saikan-client-detail .client-title {
+    font-size: 25px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-copy,
+  #saikan-client-detail .client-copy {
+    font-size: 15.2px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card {
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+    padding-top: 16px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card.after {
+    top: 218px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card::before,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card::before {
+    height: 174px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-arrow,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-arrow {
+    top: 199px !important;
+    width: 39px !important;
+    height: 39px !important;
+    font-size: 20px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-head {
+    margin-bottom: 11px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head span,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-head span {
+    font-size: 10px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card ul,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card ul {
+    gap: 8px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card li {
+    font-size: 12.05px !important;
+    padding-left: 23px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card li::before,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card li::before {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 10px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before li::before,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card.before li::before {
+    padding-bottom: 1px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after li::before,
+  #saikan-client-detail .client-solution-slide-ba .client-ba-card.after li::before {
+    padding-bottom: 0.5px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process,
+  #saikan-client-detail .client-solution-slide-process .client-process {
+    padding-top: 16px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process::before,
+  #saikan-client-detail .client-solution-slide-process .client-process::before {
+    height: 392px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process-eyebrow,
+  #saikan-client-detail .client-solution-slide-process .client-process-eyebrow {
+    font-size: 10px !important;
+    margin-bottom: 13px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-process h3,
+  #saikan-client-detail .client-solution-slide-process .client-process h3 {
+    font-size: 24px !important;
+    margin-bottom: 23px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps,
+  #saikan-client-detail .client-solution-slide-process .client-steps {
+    gap: 18px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps article,
+  #saikan-client-detail .client-solution-slide-process .client-steps article {
+    grid-template-columns: 28px 48px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    min-height: 78px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps article:not(:last-child)::before,
+  #saikan-client-detail .client-solution-slide-process .client-steps article:not(:last-child)::before {
+    left: 40px !important;
+    top: 50px !important;
+    height: 43px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-step-number,
+  #saikan-client-detail .client-solution-slide-process .client-step-number {
+    margin-top: 14px !important;
+    font-size: 11px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-step-icon,
+  #saikan-client-detail .client-solution-slide-process .client-step-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-step-icon svg,
+  #saikan-client-detail .client-solution-slide-process .client-step-icon svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps strong,
+  #saikan-client-detail .client-solution-slide-process .client-steps strong {
+    font-size: 15px !important;
+  }
+
+  .bf-scope #saikan-client-detail .client-solution-slide-process .client-steps p,
+  #saikan-client-detail .client-solution-slide-process .client-steps p {
+    font-size: 12.45px !important;
+    max-width: 230px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   LOCK — Before / After Saikan images (canonical optical center)
+   Scoped to slide 1 visual column only (no cross-slide bleed).
+   -------------------------------------------------------------------------- */
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
+  position: absolute !important;
+  z-index: 2 !important;
+  left: auto !important;
+  top: auto !important;
+  right: -8px !important;
+  bottom: 9px !important;
+  width: 114% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: 119% !important;
+  margin: 0 !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  align-self: auto !important;
+  justify-self: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  pointer-events: none !important;
+  opacity: 0.82 !important;
+  transform: translateX(8px) translateY(-9px) scale(1) !important;
+  transform-origin: center center !important;
+  mix-blend-mode: screen !important;
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 50%,
+    #000 68%,
+    rgba(0, 0, 0, 0.74) 84%,
+    transparent 98%
+  ) !important;
+  mask-image: radial-gradient(
+    ellipse at 50% 50%,
+    #000 68%,
+    rgba(0, 0, 0, 0.74) 84%,
+    transparent 98%
+  ) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img {
+  right: -11px !important;
+  bottom: -12px !important;
+  width: 120% !important;
+  max-height: 122% !important;
+  filter: contrast(1.18) brightness(1.12) saturate(1.08) !important;
+  mix-blend-mode: normal !important;
+  transform: translateX(2px) translateY(8px) scale(1) !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   LOCK — page gutter + content alignment (beats landing-bottom v61/v91)
+   -------------------------------------------------------------------------- */
+
+.bf-scope #saikan-client-detail .client-inner,
+#saikan-client-detail .client-inner {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solutions-slider,
+#saikan-client-detail .client-solutions-slider,
+.bf-scope #saikan-client-detail .client-solutions-track,
+#saikan-client-detail .client-solutions-track,
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-before-after,
+#saikan-client-detail .client-solution-slide-ba .client-before-after {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card,
+.bf-scope .client-expansion#saikan-client-detail .client-ba-card,
+.bf-scope .landing-detail-section.client-expansion#saikan-client-detail .client-ba-card {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-head,
+#saikan-client-detail .client-solution-slide-ba .client-ba-head,
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card ul,
+#saikan-client-detail .client-solution-slide-ba .client-ba-card ul,
+.bf-scope .client-expansion#saikan-client-detail .client-ba-head,
+.bf-scope .client-expansion#saikan-client-detail .client-ba-card ul,
+.bf-scope .landing-detail-section.client-expansion#saikan-client-detail .client-ba-head,
+.bf-scope .landing-detail-section.client-expansion#saikan-client-detail .client-ba-card ul {
+  width: auto !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}

@@ -1,0 +1,895 @@
+/* Canonical BF-scope landing styles.
+   This file replaces the old accumulated legacy patch stack with the rules that
+   are still used by the current React sections. */
+
+.bf-scope {
+  --bg: #000;
+  --fg: #f4f3ef;
+  --muted: rgba(244, 243, 239, 0.66);
+  --blue: var(--saikan-title-blue);
+  --saikan-page-gutter: var(--frame-pad);
+  --saikan-card-radius: 18px;
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.bf-scope *,
+.bf-scope *::before,
+.bf-scope *::after {
+  box-sizing: inherit;
+}
+
+.bf-scope .outer {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+.bf-scope .stage {
+  position: relative;
+  width: min(100vw, var(--page-max));
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: #000;
+}
+
+.bf-scope .landing-detail-section,
+.bf-scope .landing-detail-section.products-detail,
+.bf-scope .landing-detail-section.client-expansion,
+.bf-scope .landing-detail-section.venture-detail {
+  position: relative;
+  z-index: 8;
+  max-height: none;
+  margin: var(--page-section-gap) 0 0;
+  padding-left: var(--frame-pad);
+  padding-right: var(--frame-pad);
+  scroll-margin-top: 32px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+/* Our Thesis */
+.bf-scope .thesis {
+  position: relative;
+  z-index: 6;
+  margin-top: 0;
+  padding: var(--page-section-gap) var(--frame-pad) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.bf-scope .thesis::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 152px;
+  width: 380px;
+  height: 300px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.55;
+  background: radial-gradient(circle at 50% 52%, rgba(49, 104, 255, 0.16), rgba(49, 104, 255, 0.055) 24%, transparent 62%);
+  filter: blur(12px);
+}
+
+.bf-scope .thesis-eyebrow {
+  margin: 0 0 18px;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.23em;
+  font-weight: 780;
+  text-shadow: 0 0 16px rgba(80, 137, 255, 0.28);
+}
+
+.bf-scope .thesis-title {
+  margin: 0;
+  max-width: 356px;
+  color: var(--fg);
+  font-size: 31px;
+  line-height: 1.08;
+  letter-spacing: -0.048em;
+  font-weight: 480;
+}
+
+.bf-scope .thesis-copy {
+  margin: 20px 0 0;
+  max-width: 344px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.62;
+  letter-spacing: -0.035em;
+  font-weight: 360;
+}
+
+.bf-scope .thesis-copy + .thesis-copy {
+  margin-top: 12px;
+  color: rgba(244, 243, 239, 0.6);
+}
+
+.bf-scope .thesis-fixed-slider-wrap {
+  position: relative;
+  margin: 18px -4px 0;
+}
+
+.bf-scope .thesis-fixed-slider {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  height: auto;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 4px;
+  padding: 0 4px 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.bf-scope .thesis-fixed-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.bf-scope .thesis-fixed-slide.thesis-mockup-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 340 / 258;
+  scroll-snap-align: start;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bf-scope .thesis-coded-slide {
+  position: relative;
+}
+
+.bf-scope .thesis-io {
+  position: absolute;
+  inset: 6px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bf-scope .io-stage {
+  container-type: size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 340 / 236;
+  max-height: 100%;
+}
+
+.bf-scope .io-radar {
+  position: absolute;
+  left: 64%;
+  top: 50%;
+  width: 78%;
+  height: 92%;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  opacity: 0.62;
+  pointer-events: none;
+  background:
+    repeating-radial-gradient(circle at 50% 50%, rgba(77, 125, 255, 0.14) 0 1px, transparent 1px 9%),
+    radial-gradient(circle at 50% 50%, rgba(80, 136, 255, 0.1), transparent 62%);
+  filter: drop-shadow(0 0 18px rgba(65, 116, 255, 0.08));
+}
+
+.bf-scope .io-radar-left {
+  left: 22%;
+}
+
+.bf-scope .io-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bf-scope .io-row {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  column-gap: 3.2cqw;
+  transform: translateY(-50%);
+  color: var(--c);
+}
+
+.bf-scope .io-tile {
+  flex: 0 0 auto;
+  width: 9.2cqw;
+  height: 9.2cqw;
+  display: grid;
+  place-items: center;
+  border-radius: 2.7cqw;
+  border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
+  background: linear-gradient(155deg, color-mix(in srgb, var(--c) 22%, rgba(5, 10, 20, 0.9)), rgba(5, 10, 20, 0.92) 62%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--c) 22%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.bf-scope .io-tile svg {
+  width: 56%;
+  height: 56%;
+  color: var(--c);
+}
+
+.bf-scope .io-label {
+  color: rgba(244, 243, 239, 0.82);
+  font-size: clamp(11px, 3.7cqw, 14px);
+  line-height: 1;
+  font-weight: 460;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+.bf-scope .out-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.bf-scope .thesis-output-coded-slide .out-row {
+  justify-content: flex-start;
+}
+
+.bf-scope .out-text b {
+  color: var(--fg);
+  font-size: clamp(12px, 3.9cqw, 14.5px);
+  line-height: 1.04;
+  font-weight: 580;
+  letter-spacing: -0.035em;
+}
+
+.bf-scope .out-text small {
+  color: rgba(244, 243, 239, 0.56);
+  font-size: clamp(8.4px, 2.7cqw, 10px);
+  line-height: 1.2;
+  font-weight: 360;
+}
+
+.bf-scope .io-chip {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  place-content: center;
+  border: 1.5px solid rgba(96, 156, 255, 0.85);
+  border-radius: clamp(14px, 5.2cqw, 20px);
+  background: radial-gradient(circle at 50% 42%, rgba(40, 96, 190, 0.2), rgba(4, 8, 16, 0.96) 70%);
+  box-shadow: 0 0 28px rgba(70, 130, 255, 0.45), 0 0 60px rgba(58, 118, 255, 0.2), inset 0 0 26px rgba(40, 90, 200, 0.22);
+  text-align: center;
+}
+
+.bf-scope .io-chip::before {
+  content: "";
+  position: absolute;
+  inset: 11%;
+  border-radius: 8px;
+  background-image: radial-gradient(rgba(120, 175, 255, 0.42) 1px, transparent 1.4px);
+  background-size: 8.2% 8.2%;
+  opacity: 0.7;
+}
+
+.bf-scope .io-chip .chip-bracket {
+  display: none;
+}
+
+.bf-scope .io-chip .chip-word {
+  position: relative;
+  z-index: 2;
+  display: block;
+  color: #f4f6ff;
+  font-size: clamp(16px, 6.2cqw, 24px);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  font-weight: 360;
+}
+
+.bf-scope .io-chip .chip-os {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0.2em;
+  color: #2aa8ff;
+  font-size: clamp(9px, 3.2cqw, 12px);
+  line-height: 1;
+  letter-spacing: 0.11em;
+  font-weight: 360;
+  text-transform: uppercase;
+}
+
+
+.bf-scope .cap-grid-wrap {
+  container-type: inline-size;
+  position: absolute;
+  inset: 5px 0 14px;
+  display: flex;
+}
+
+.bf-scope .cap-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 5px;
+}
+
+.bf-scope .cap-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 7px 7px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 12px;
+  background:
+    radial-gradient(92px 72px at 0% 0%, color-mix(in srgb, var(--c) 22%, transparent), color-mix(in srgb, var(--c) 8%, transparent) 34%, transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.011));
+}
+
+.bf-scope .cap-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 7px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--c) 34%, transparent);
+  border-radius: 9px;
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 9%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+.bf-scope .cap-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.bf-scope .cap-icon .cap-badge {
+  color: var(--c);
+  font-size: 8.2px;
+  font-weight: 680;
+}
+
+.bf-scope .cap-card h3 {
+  margin: 0 0 3px;
+  color: var(--fg);
+  font-size: clamp(12px, 3.6cqw, 13.4px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 560;
+}
+
+.bf-scope .cap-card p {
+  margin: 0;
+  color: rgba(244, 243, 239, 0.58);
+  font-size: clamp(8.6px, 2.7cqw, 10px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  font-weight: 360;
+}
+
+.bf-scope .thesis-fixed-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 7px;
+}
+
+.bf-scope .thesis-fixed-dots button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.bf-scope .thesis-fixed-dots button.active {
+  width: 18px;
+  background: #7aa6ff;
+  box-shadow: 0 0 16px rgba(80, 137, 255, 0.36);
+}
+
+/* Products / Our Stack */
+.bf-scope .products-detail .products-detail-inner {
+  position: relative;
+  min-height: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.bf-scope .products-detail .products-hero-art {
+  position: absolute;
+  z-index: 1;
+  right: -30px;
+  top: -20px;
+  width: 224px;
+  height: 224px;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  filter: contrast(1.1) brightness(1.08) saturate(1.04) drop-shadow(0 20px 32px rgba(0, 0, 0, 0.52));
+  -webkit-mask-image: radial-gradient(ellipse at 50% 52%, #000 50%, rgba(0, 0, 0, 0.88) 68%, transparent 90%);
+  mask-image: radial-gradient(ellipse at 50% 52%, #000 50%, rgba(0, 0, 0, 0.88) 68%, transparent 90%);
+}
+
+.bf-scope .products-detail .products-detail-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 270px;
+  padding-top: 0;
+}
+
+.bf-scope .products-detail .products-detail-copy .micro-eyebrow {
+  margin-bottom: 18px;
+}
+
+.bf-scope .products-detail .products-detail-copy h4 {
+  max-width: 270px;
+  margin: 0;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1.08;
+  letter-spacing: -0.065em;
+  font-weight: 520;
+}
+
+.bf-scope .products-detail .products-detail-copy h4 span {
+  color: var(--saikan-title-blue);
+  text-shadow: 0 0 20px rgba(134, 166, 255, 0.3);
+}
+
+.bf-scope .products-detail .products-detail-copy p {
+  max-width: 270px;
+  margin: 27px 0 0;
+  color: rgba(244, 243, 239, 0.62);
+  font-size: 16px;
+  line-height: 1.54;
+  letter-spacing: -0.05em;
+  font-weight: 360;
+}
+
+.bf-scope .stack-product-carousel {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.bf-scope .stack-product-track,
+.bf-scope .venture-stack-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 2px 18px;
+  scrollbar-width: none;
+}
+
+.bf-scope .stack-product-track::-webkit-scrollbar,
+.bf-scope .venture-stack-track::-webkit-scrollbar {
+  display: none;
+}
+
+.bf-scope .stack-product-slide,
+.bf-scope .venture-stack-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: center;
+}
+
+.bf-scope .product-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  margin-top: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.bf-scope .product-card {
+  appearance: none;
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  padding: 15px 14px 14px;
+  overflow: hidden;
+  border: 1px solid var(--product-border);
+  border-radius: 18px;
+  background:
+    radial-gradient(160px 110px at 50% 0%, var(--product-glow), transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.036), rgba(255, 255, 255, 0.012));
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.038);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+}
+
+.bf-scope .product-card::after {
+  content: "\2192";
+  position: absolute;
+  right: 14px;
+  bottom: 13px;
+  color: var(--product-color);
+  font-size: 19px;
+  opacity: 0.82;
+}
+
+.bf-scope .product-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--product-color) 42%, transparent);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28), 0 0 24px var(--product-glow), inset 0 1px 0 rgba(255, 255, 255, 0.046);
+}
+
+.bf-scope .product-card:focus-visible,
+.bf-scope .stack-carousel-dots button:focus-visible,
+.bf-scope .venture-carousel-dots button:focus-visible {
+  outline: 1px solid rgba(137, 166, 255, 0.72);
+  outline-offset: 3px;
+}
+
+.bf-scope .product-card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.bf-scope .product-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px var(--product-shadow));
+}
+
+.bf-scope .product-card h5 {
+  margin: 0 0 7px;
+  color: var(--fg);
+  font-size: 15px;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 590;
+}
+
+.bf-scope .product-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--product-color);
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: 770;
+}
+
+.bf-scope .product-card p {
+  max-width: 122px;
+  margin: 0;
+  color: rgba(244, 243, 239, 0.58);
+  font-size: 10.8px;
+  line-height: 1.36;
+  letter-spacing: -0.02em;
+}
+
+.bf-scope .product-card.nest { --product-color: #3e80ff; --product-border: rgba(56, 111, 255, 0.24); --product-glow: rgba(42, 95, 255, 0.1); --product-shadow: rgba(42, 95, 255, 0.3); }
+.bf-scope .product-card.brain { --product-color: #45dfd0; --product-border: rgba(68, 222, 207, 0.21); --product-glow: rgba(42, 211, 197, 0.085); --product-shadow: rgba(42, 211, 197, 0.25); }
+.bf-scope .product-card.pulse { --product-color: #ff4e55; --product-border: rgba(255, 76, 83, 0.21); --product-glow: rgba(255, 61, 72, 0.075); --product-shadow: rgba(255, 61, 72, 0.25); }
+.bf-scope .product-card.reson { --product-color: #ffad45; --product-border: rgba(255, 169, 64, 0.22); --product-glow: rgba(255, 160, 45, 0.08); --product-shadow: rgba(255, 160, 45, 0.25); }
+
+.bf-scope .product-focus-slide,
+.bf-scope .venture-focus-slide {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 10px;
+  min-height: 286px;
+  overflow: visible;
+  padding: 10px 0 16px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.bf-scope .product-focus-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bf-scope .product-focus-copy .micro-eyebrow {
+  width: max-content;
+  max-width: 100%;
+  margin: 0 0 12px;
+}
+
+.bf-scope .product-focus-copy h5 {
+  max-width: 250px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(27px, 7vw, 36px);
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  font-weight: 520;
+}
+
+.bf-scope .product-focus-copy p {
+  max-width: 250px;
+  margin: 14px 0 18px;
+  color: rgba(238, 242, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+.bf-scope .product-focus-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 245px;
+}
+
+.bf-scope .product-focus-points span {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(220, 230, 255, 0.78);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.bf-scope .product-logo-visual {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: 196px;
+  place-items: center;
+}
+
+.bf-scope .product-focus-logo-aura {
+  position: relative;
+  display: flex;
+  width: min(190px, 46vw);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bf-scope .product-focus-logo-aura::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 18px);
+  left: 50%;
+  width: 142px;
+  height: 142px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 38%, transparent), transparent 68%);
+  filter: blur(20px);
+  opacity: 0.72;
+}
+
+.bf-scope .product-focus-logo-img {
+  position: relative;
+  z-index: 2;
+  width: 102px;
+  height: 102px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 22px color-mix(in srgb, var(--accent) 38%, transparent));
+}
+
+.bf-scope .nest-focus .product-focus-logo-img { width: 108px; height: 108px; }
+.bf-scope .reson-focus .product-focus-logo-img { width: 112px; height: 112px; }
+
+.bf-scope .product-logo-word {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 760;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+}
+
+.bf-scope .stack-carousel-dots,
+.bf-scope .venture-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin: 0;
+}
+
+.bf-scope .stack-carousel-dots button,
+.bf-scope .venture-carousel-dots button {
+  appearance: none;
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bf-scope .stack-carousel-dots button.active,
+.bf-scope .venture-carousel-dots button.active {
+  width: 28px;
+  background: #89a6ff;
+  box-shadow: 0 0 18px rgba(137, 166, 255, 0.55);
+}
+
+/* Venture Studio */
+.bf-scope .venture-stack-carousel {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin-top: 26px;
+  overflow: hidden;
+}
+
+.bf-scope .venture-card.more {
+  --product-color: #86a6ff;
+  --product-border: rgba(134, 166, 255, 0.24);
+  --product-glow: rgba(134, 166, 255, 0.1);
+  --product-shadow: rgba(134, 166, 255, 0.3);
+}
+
+.bf-scope .venture-card.reflab { --product-color: #ffc130; --product-border: rgba(255, 193, 48, 0.24); --product-glow: rgba(255, 193, 48, 0.1); --product-shadow: rgba(255, 181, 28, 0.3); }
+.bf-scope .venture-card.wingy { --product-color: #ff4297; --product-border: rgba(255, 66, 151, 0.24); --product-glow: rgba(255, 66, 151, 0.1); --product-shadow: rgba(255, 66, 151, 0.3); }
+.bf-scope .venture-card.clucks { --product-color: #ff6821; --product-border: rgba(255, 104, 33, 0.24); --product-glow: rgba(255, 104, 33, 0.1); --product-shadow: rgba(255, 104, 33, 0.28); }
+
+.bf-scope .venture-card .more-icon {
+  border: 1px solid color-mix(in srgb, var(--product-color) 28%, transparent);
+  border-radius: 14px;
+  color: var(--product-color);
+  background: color-mix(in srgb, var(--product-color) 10%, transparent);
+  box-shadow: 0 0 18px var(--product-shadow);
+}
+
+.bf-scope .venture-card .more-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.bf-scope .venture-focus-logo-img {
+  width: 104px;
+  height: 104px;
+}
+
+.bf-scope .venture-logo-visual {
+  height: 196px;
+}
+
+.bf-scope .venture-focus-logo-aura .product-logo-word {
+  max-width: 150px;
+  text-align: center;
+  white-space: normal;
+  font-size: 21px;
+  line-height: 0.95;
+}
+
+.bf-scope .daniel-focus .product-logo-word,
+.bf-scope .perspectiv-focus .product-logo-word {
+  font-size: 18px;
+}
+
+@media (max-width: 420px) {
+  .bf-scope .stack-product-track,
+  .bf-scope .venture-stack-track {
+    gap: 14px;
+  }
+
+  .bf-scope .product-focus-slide,
+  .bf-scope .venture-focus-slide {
+    grid-template-columns: 1fr 0.86fr;
+    gap: 8px;
+  }
+
+  .bf-scope .product-focus-copy h5 {
+    font-size: 26px;
+  }
+
+  .bf-scope .product-focus-copy p {
+    max-width: 210px;
+    font-size: 13px;
+  }
+
+  .bf-scope .product-focus-logo-img,
+  .bf-scope .venture-focus-logo-img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .bf-scope .stack-overview-slide .product-card-icon,
+  .bf-scope .venture-overview-slide .product-card-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .bf-scope .thesis {
+    padding-left: var(--frame-pad);
+    padding-right: var(--frame-pad);
+  }
+
+  .bf-scope .thesis-title {
+    font-size: 29px;
+  }
+
+  .bf-scope .thesis-copy {
+    font-size: 13.5px;
+  }
+
+  .bf-scope .thesis-io,
+  .bf-scope .cap-grid-wrap {
+    inset: 6px 0 14px;
+  }
+
+  .bf-scope .cap-grid {
+    gap: 4px;
+  }
+
+  .bf-scope .cap-card {
+    padding: 7px 6px 6px;
+  }
+
+  .bf-scope .products-detail .products-hero-art {
+    right: -35px;
+    top: 30px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .bf-scope .products-detail .products-detail-copy h4 {
+    font-size: 34px;
+  }
+
+  .bf-scope .products-detail .products-detail-copy p {
+    font-size: 18px;
+  }
+
+  .bf-scope .product-cards {
+    gap: 14px 16px;
+  }
+}

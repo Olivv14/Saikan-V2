@@ -1,0 +1,12 @@
+/* Saikan landing stylesheet manifest.
+   Source CSS is ordered by responsibility so the visual reference is maintainable:
+   00 foundation/tokens, 10 shared primitives, 20 section foundations,
+   30-40 section-specific refinements, 80 footer, 90 final layout overrides. */
+@import './00-foundation.css';
+@import './10-shared-components.css';
+@import './20-core-sections.css';
+@import './30-business-lines.css';
+@import './40-client-solutions.css';
+@import './80-footer.css';
+@import './90-layout-overrides.css';
+@import './95-live-parity-overrides.css';
