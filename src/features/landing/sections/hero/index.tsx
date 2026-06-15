@@ -12,7 +12,7 @@ export default function Hero() {
       <img
         src="/assets/sketch/hero-stack.png"
         alt=""
-        className="pointer-events-none absolute top-[70px] right-2 z-[1] h-auto w-60 opacity-[0.98] [filter:contrast(1.08)_brightness(1.02)_drop-shadow(-10px_0_26px_rgba(255,255,255,0.065))]"
+        className="pointer-events-none absolute top-[70px] right-2 z-[1] h-auto w-60 opacity-[0.98]"
         aria-hidden="true"
       />
 

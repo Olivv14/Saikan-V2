@@ -789,58 +789,18 @@
 
 /* --------------------------------------------------------------------------
    LOCK — Before / After Saikan images (canonical optical center)
-   Scoped to slide 1 visual column only (no cross-slide bleed).
+   Before image lives in .client-ba-visual--back (not .client-ba-card.before).
    -------------------------------------------------------------------------- */
 
-.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
-#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
+.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img,
+#saikan-client-detail .client-solution-slide-ba .client-ba-unit.before .client-ba-visual--back img,
 .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,
 #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img {
   position: absolute !important;
-  z-index: 2 !important;
-  left: auto !important;
-  top: auto !important;
-  right: -8px !important;
-  bottom: 9px !important;
-  width: 114% !important;
-  max-width: none !important;
-  height: auto !important;
-  max-height: 119% !important;
-  margin: 0 !important;
-  grid-column: auto !important;
-  grid-row: auto !important;
-  align-self: auto !important;
-  justify-self: auto !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
   object-fit: contain !important;
   object-position: center center !important;
-  pointer-events: none !important;
-  opacity: 0.82 !important;
-  transform: translateX(8px) translateY(-9px) scale(1) !important;
-  transform-origin: center center !important;
-  mix-blend-mode: screen !important;
-  -webkit-mask-image: radial-gradient(
-    ellipse at 50% 50%,
-    #000 68%,
-    rgba(0, 0, 0, 0.74) 84%,
-    transparent 98%
-  ) !important;
-  mask-image: radial-gradient(
-    ellipse at 50% 50%,
-    #000 68%,
-    rgba(0, 0, 0, 0.74) 84%,
-    transparent 98%
-  ) !important;
-}
-
-.bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img,
-#saikan-client-detail .client-solution-slide-ba .client-ba-card.before .client-ba-visual img {
-  right: -11px !important;
-  bottom: -12px !important;
-  width: 120% !important;
-  max-height: 122% !important;
-  filter: contrast(1.18) brightness(1.12) saturate(1.08) !important;
-  mix-blend-mode: normal !important;
-  transform: translateX(2px) translateY(8px) scale(1) !important;
 }
 
 .bf-scope #saikan-client-detail .client-solution-slide-ba .client-ba-card.after .client-ba-visual img,
